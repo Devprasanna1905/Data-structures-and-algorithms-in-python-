@@ -1,8 +1,8 @@
 def binarysearch(arr,n):
     first=0
     last=len(arr)-1
-    while first<last:
-        mid=(first+last)//2
+    while first<=last:
+        mid=first+(last-first)//2
         if arr[mid]==n:
             return True
         else:
