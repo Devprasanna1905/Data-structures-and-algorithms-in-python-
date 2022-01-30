@@ -14,3 +14,16 @@ def check(arr):
 
 arr=[1, 3, 2, 1, 4, 1,1]    
 print(check(arr))
+
+
+def frequent(List):
+    counter = 0
+    num = List[0]
+     
+    for i in List:
+        curr_frequency = List.count(i)
+        if(curr_frequency> counter):
+            counter = curr_frequency
+            num = i
+ 
+    print("{} occurs {} times in the list".format(num,counter))
