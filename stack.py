@@ -6,7 +6,10 @@ class stack:
     def size(self):
         return len(self.items)
     def remove(self):
-        self.items.pop()
+        if len(self.items)<0:
+            return "stack is empty"
+        else:
+            self.items.pop()
     def display(self):
         return self.items
     def peek(self):
