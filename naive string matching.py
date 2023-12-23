@@ -5,7 +5,7 @@ def search(pattern,text):
 	while i<N-M:
 		j = 0
 		while(j < M):
-			if (txt[i + j] != pat[j]):
+			if (text[i + j] != pattern[j]):
 				break
 			j += 1
 		if (j == M):
