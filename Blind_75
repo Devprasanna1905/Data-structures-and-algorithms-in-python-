@@ -1,0 +1,55 @@
+#1_Two sum
+class Solution:
+  def twoSum(self, nums, target):
+      # Create a dictionary to store the numbers and their indices
+      num_indices = {}
+      for i, num in enumerate(nums):
+          # Calculate the complement of the current number
+          complement = target - num
+          # If the complement is found in the dictionary, return the indices
+          if complement in num_indices:
+              return [num_indices[complement], i]
+          # Otherwise, add the number and its index to the dictionary
+          num_indices[num] = i
+
+# Testing the algorithm with the examples
+solution = Solution()
+# Output the results
+print("Output:", solution.twoSum([3, 2, 4], 6)) 
+print("Output:", solution.twoSum([-1, -2, -3, -4, -5], -8)) 
+print("Output:", solution.twoSum([10, 15, 21, 25, 30], 45))
+
+
+#2_contains_duplicate
+def contains_duplicate(nums: list[int]) -> bool:
+    seen = set()
+    for x in nums:
+        if x in seen:
+            return True
+        seen.add(x)
+    return False
+
+# Example
+print(contains_duplicate([1,2,3,1]))  # True
+print(contains_duplicate([1,2,3,4]))  # False
+
+#3_buy sell stock
+
+def check(prices):
+    min=float('inf')
+    profit=0
+    for price in prices:
+        if price<min:
+            min=price
+        profit=max(profit,price-min)
+    return profit
+print(check([8, 6, 5, 2, 1]))
+
+#4_VALID ANAGRAM
+
+def check_anagram(s1,s2):
+    if sorted(s1.lower().strip())==sorted(s2.lower().strip()):
+        return True
+    return False
+print(check_anagram('car','  rac'))
+
