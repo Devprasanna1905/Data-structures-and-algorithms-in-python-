@@ -1,7 +1,6 @@
 def find(V):
       
     deno = [1, 2, 5, 10, 20, 50,100, 500, 1000]
-    n = len(deno)
     ans = []
     deno.sort(reverse=True)
 

@@ -5,4 +5,9 @@ def anagram(s1,s2):
         return " it is anagram"
     return "it is not anagram"  
 #input string     
-print(anagram("",""))    
+print(anagram("",""))
+
+
+
+
+

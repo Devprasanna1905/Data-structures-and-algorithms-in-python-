@@ -13,7 +13,7 @@ class Solution:
           num_indices[num] = i
 
 # Testing the algorithm with the examples
-solution = Solution()
+solution = Solution()  
 # Output the results
 print("Output:", solution.twoSum([3, 2, 4], 6)) 
 print("Output:", solution.twoSum([-1, -2, -3, -4, -5], -8)) 
@@ -53,3 +53,18 @@ def check_anagram(s1,s2):
     return False
 print(check_anagram('car','  rac'))
 
+#5_valid_parentheses
+
+def check_paren(s):
+    l=[]
+    for i in s:
+        if i==']':
+            if l[-1]=='[':
+                l.pop()
+            else:
+                return False
+        else:
+            l.append(i)
+    return l==[]
+
+print(check_paren('[[]'))

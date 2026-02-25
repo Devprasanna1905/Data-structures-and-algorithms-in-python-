@@ -4,5 +4,5 @@ def check(s):
     return s
   else:
     return check(s[1:])+s[0]
- print(check("hello")) 
+print(check("hello")) 
   
