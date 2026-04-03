@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self,value):
-        self.value=value
+    def __init__(self,data):
+        self.data=data
         self.next=None
         
         
@@ -35,9 +35,12 @@ class LinkedList:
         
         
     def printnode(self):
+        """
+        Print all the nodes in the linked list
+        """
         temp=self.head
         while(temp):
-            print (temp.value)
+            print (temp.data,end="->")
             temp=temp.next
             
 if __name__=='__main__':
